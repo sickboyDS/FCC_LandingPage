@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +7,7 @@
 body{
     font-family: 'Playfair Display', serif;
 }
-
+/* -------- HEADER -------- */
 #header{
     position:fixed;
     top: 0;
@@ -19,11 +18,9 @@ body{
     align-items: center;
     background-color: white;
 }
-
 .logo{
     width: 60vw;
 }
-
 #header-img{
     width: 100%;
     height: auto;
@@ -74,7 +71,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 /* -------- PRESENTATION -------- */
@@ -118,9 +114,12 @@ a{
 .card .btn {
     margin: 15px 0px;
     padding: 5px 20px;
-    background-color: rgb(255, 219, 101);
+    background-color: rgb(255, 205, 43);
     border: 1px solid black;
     font-weight: bold;
+}
+.card .btn:hover{
+    background-color: rgb(255, 219, 101);
 }
 /* -------- FOOTER -------- */
 #footer{
@@ -141,8 +140,12 @@ a{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+#footer #submit:hover{
+    background-color: rgb(255, 205, 43);
+}
 
 @media (max-width:600px)  { 
+/* -------- HEADER -------- */
     .logo{
         width: 100%;
         text-align: center;
@@ -150,8 +153,50 @@ a{
     nav{
         display:none;
     }
+/* -------- FEATURES -------- */
+    #features{
+        margin-top: 100px;
+    }
+/* -------- PRESENTATION -------- */
+    #presentation {
+        margin: 50px 10px;
+    }
 
+/* -------- FEATURES -------- */
     .grid-container {
-        grid-template-columns:20vw 60vw;
-      }
+        grid-template-columns:1fr 2fr;
+    }
+    #features .desc > h2 {
+        font-size: 1em;
+    }
+    #features .desc > p {
+        font-size: .8em;
+    }
+/* -------- CATEGORIES -------- */
+    #categories{
+        flex-direction: column;
+        margin: 50px 0px;
+    }
+    .card{
+        width: 50vw;
+        margin: 10px auto;
+    }
+    /* -------- FOOTER -------- */
+    #footer{
+        flex-direction: column;
+    }
+    #form{
+        margin: 10px 0 5px;
+    }
+    #footer #email{
+        padding:3px;
+        width:40vw;
+    }
+    #footer #submit{
+        padding:3.5px 10px;
+    }
+    #footer > p {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
 }
